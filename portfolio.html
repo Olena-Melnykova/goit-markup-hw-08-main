@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <nav class="header__navigation">
+          <a class="link logo header__logo" href=""><span class="header__web">Web</span>Studio</a>
+    
+          <ul class="list header-list header__menu">
+            <li class="header__item"><a class="link header__link" href="./index.html">Студия</a></li>
+            <li class="header__item"><a class="link header__link current" href="./portfolio.html">Портфолио</a></li>
+            <li class="header__item"><a class="link header__link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+    
+        <div class="header__contacts">
+          <ul class="list header-list">
+            <li class="header-list__contacts">
+              <a class="link header__mail contacts" href="mailto:info@devstudio.com">
+                <svg class="header__icons" width="16" height="12">
+                  <use href="images/icons.svg#icon-email"></use>
+                </svg>info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a class="link header__tel contacts" href="tel:+380961111111">
+                <svg class="header__icons" width="10" height="16">
+                  <use href="images/icons.svg#icon-number"></use>
+                </svg>+38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+        </div>
+    
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="menu-open-btn__icon" width="40" height="40">
+            <use href="images/icons.svg#icon-menuburger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="mobile-menu__container container">
+          <div class="mobile-menu__container-menu">
+            <button type="button" class="menu-close-btn" data-menu-close>
+              <svg class="menu-close-btn__icon" width="40" height="40">
+                <use href="images/icons.svg#icon-closex"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list list">
+              <li class="mobile-menu__item">
+                <a class="link mobile-menu__link mobile-menu__current" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="link mobile-menu__link mobile-menu__link--active" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="link mobile-menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="mobile-menu__container-contacts">
+            <ul class="list mobile-menu__contacts">
+              <li>
+                <a class="link mobile-menu__tel" href="tel:+380961111111">+38 096 111 11 11
+                </a>
+              </li>
+              <li>
+                <a class="link mobile-menu__mail" href="mailto:info@devstudio.com">info@devstudio.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu__container-socials">
+            <ul class="mobile-menu__socials social-menu list">
+              <li class="social-menu__item">
+                <a class="social-menu__link link" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link link" href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link link" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+      </div>
+    </header>
+
+    <main>
+      <section class="main-section">  
+        <div class="container main-section__btn-container"> 
+          <ul class="list portfolio">
+            <li class= "portfolio__list">
+              <button type="button" class="portfolio__btn">Все</button>
+            </li>
+            <li class= "portfolio__list">
+              <button type="button" class="portfolio__btn">Веб-сайты</button>
+            </li>
+            <li class= "portfolio__list">
+              <button type="button" class="portfolio__btn">Приложения</button>
+            </li>
+            <li class= "portfolio__list">
+              <button type="button" class="portfolio__btn">Дизайн</button>
+            </li>
+            <li class= "portfolio__list">
+                <button type="button" class="portfolio__btn">Маркетинг</button>
+            </li>
+          </ul>
+        </div>   
+      
+        <div class="container options">  
+          <ul class="list options__list">
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-1-desktop.webp    1x,
+                    ./images/portfolio/portfolio-1-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-1-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-1-desktop@2x.jpg 2x
+                    "  type="image/jpeg" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-1-tablet.webp    1x,
+                    ./images/portfolio/portfolio-1-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-1-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-1-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-1-mobile.webp    1x,
+                    ./images/portfolio/portfolio-1-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-1-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-1-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />
+                  <img src="./images/img2(1).jpg" alt="Веб-сайт" />
+                </picture>
+                <p class="options__img-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
+                шпионажа и атак на защищённые сервера конкурентов.</p>
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Технокряк</h3>
+                <p class="options__list-item">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-2-desktop.webp    1x,
+                    ./images/portfolio/portfolio-2-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-2-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-2-desktop@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-2-tablet.webp    1x,
+                    ./images/portfolio/portfolio-2-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-2-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-2-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-2-mobile.webp    1x,
+                    ./images/portfolio/portfolio-2-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-2-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-2-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />                
+                  <img src="./images/img2(2).jpg" alt="Постер New Orlean vs Golden Star" />
+                </picture>
+                
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title options__list-title-nowrap">Постер New Orlean vs Golden Star</h3>
+                <p class="options__list-item">Дизайн</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-3-desktop.webp    1x,
+                    ./images/portfolio/portfolio-3-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-3-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-3-desktop@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-3-tablet.webp    1x,
+                    ./images/portfolio/portfolio-3-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-3-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-3-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />              
+                  <source srcset="
+                    ./images/portfolio/portfolio-3-mobile.webp    1x,
+                    ./images/portfolio/portfolio-3-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-3-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-3-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />               
+                  <img src="./images/img2(3).jpg" alt="Ресторан морепродуктов" />
+                </picture>
+            
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Ресторан Seafood</h3>
+                <p class="options__list-item">Приложение</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-4-desktop.webp    1x,
+                    ./images/portfolio/portfolio-4-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                      ./images/portfolio/portfolio-4-desktop.jpg    1x,
+                      ./images/portfolio/portfolio-4-desktop@2x.jpg 2x
+                      " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-4-tablet.webp    1x,
+                    ./images/portfolio/portfolio-4-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-4-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-4-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-4-mobile.webp    1x,
+                    ./images/portfolio/portfolio-4-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-4-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-4-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />
+                  <img src="./images/img2(4).jpg" alt="Наушники" />
+                </picture>
+      
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Проект Prime</h3>
+                <p class="options__list-item">Маркетинг</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-5-desktop.webp    1x,
+                    ./images/portfolio/portfolio-5-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-5-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-5-desktop@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-5-tablet.webp    1x,
+                    ./images/portfolio/portfolio-5-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-5-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-5-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-5-mobile.webp    1x,
+                    ./images/portfolio/portfolio-5-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-5-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-5-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />                
+                  <img src="./images/img2(5).jpg" alt="Коробки" />
+                </picture>
+     
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Проект Boxes</h3>
+                <p class="options__list-item">Приложение</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-6-desktop.webp    1x,
+                    ./images/portfolio/portfolio-6-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-6-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-6-desktop@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-6-tablet.webp    1x,
+                    ./images/portfolio/portfolio-6-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-6-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-6-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />              
+                  <source srcset="
+                    ./images/portfolio/portfolio-6-mobile.webp    1x,
+                    ./images/portfolio/portfolio-6-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-6-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-6-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />                
+                  <img src="./images/img2(6).jpg" alt="Монитор" />
+                </picture>
+    
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Inspiration has no Borders</h3>
+                <p class="options__list-item">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-7-desktop.webp    1x,
+                    ./images/portfolio/portfolio-7-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-7-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-7-desktop@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-7-tablet.webp    1x,
+                    ./images/portfolio/portfolio-7-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-7-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-7-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-7-mobile.webp    1x,
+                    ./images/portfolio/portfolio-7-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-7-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-7-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />                
+                  <img src="./images/img2(7).jpg" alt="Журнал" />
+                </picture>
+ 
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Издание Limited Edition</h3>
+                <p class="options__list-item">Дизайн</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-8-desktop.webp    1x,
+                    ./images/portfolio/portfolio-8-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-8-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-8-desktop@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-8-tablet.webp    1x,
+                    ./images/portfolio/portfolio-8-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-8-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-8-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-8-mobile.webp    1x,
+                    ./images/portfolio/portfolio-8-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-8-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-8-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />                
+                  <img src="./images/img2(8).jpg" alt="Этикетка" />
+                </picture>
+  
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Проект LAB</h3>
+                <p class="options__list-item">Маркетинг</p>
+              </div>
+            </li>
+            <li class="options__item">
+              <div class="options__img-thumb">
+                <picture>
+                  <source srcset="
+                    ./images/portfolio/portfolio-9-desktop.webp    1x,
+                    ./images/portfolio/portfolio-9-desktop@2x.webp 2x
+                    " type="image/webp" media="(min-width: 1200px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-9-desktop.jpg    1x,
+                    ./images/portfolio/portfolio-9-desktop@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 1200px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-9-tablet.webp    1x,
+                    ./images/portfolio/portfolio-9-tablet@2x.webp 2x
+                    " type="image/webp" media="(min-width: 768px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-9-tablet.jpg    1x,
+                    ./images/portfolio/portfolio-9-tablet@2x.jpg 2x
+                    " type="image/jpeg" media="(min-width: 768px)" />                
+                  <source srcset="
+                    ./images/portfolio/portfolio-9-mobile.webp    1x,
+                    ./images/portfolio/portfolio-9-mobile@2x.webp 2x
+                    " type="image/webp" media="(max-width: 767px)" />
+                  <source srcset="
+                    ./images/portfolio/portfolio-9-mobile.jpg    1x,
+                    ./images/portfolio/portfolio-9-mobile@2x.jpg 2x
+                    " type="image/jpeg" media="(max-width: 767px)" />                
+                  <img src="./images/img2(9).jpg" alt="Ноутбук" />
+                </picture>
+  
+              </div>
+              <div class="options__content">
+                <h3 class="options__list-title">Growing Business</h3>
+                <p class="options__list-item">Приложение</p>
+              </div>
+            </li>
+          </ul>
+        </div>  
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__contacts">
+          <a class="link footer__logo" href=""><span class="footer__web">Web</span>Studio</a>
+            <address class="footer__address">г. Киев, пр-т Леси Украинки, 26</address>
+
+            <address>
+              <a class="link footer__mail" href="mailto:info@example.com">info@example.com</a><br>
+              <a class="link footer__tel" href="tel:+380991111111">+38 099 111 11 11</a>
+            </address>
+        </div>
+        <div class="footer__socials">
+          <h3 class="footer__links-title">ПРИСОЕДИНЯЙТЕСЬ</h3>
+          <ul class="footer-social footer-social__links list">                    
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link">
+                <svg class="footer-social__icon" width="20" height="20">
+                  <use href="images/icons.svg#icon-instagram"></use>                
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link">
+                <svg class="footer-social__icon" width="20" height="20">
+                  <use href="images/icons.svg#icon-twitter"></use>                
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link">
+                <svg class="footer-social__icon" width="20" height="20">
+                  <use href="images/icons.svg#icon-facebook"></use>
+                </svg>              
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link">
+                <svg class="footer-social__icon" width="20" height="20">
+                  <use href="images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>                    
+          </ul>    
+        </div>
+
+        <div class="footer__subscribe">
+          <h3 class="footer__links-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>              
+          <form name="signup-form" autocomplete="on" novalidate class="signup-form">
+            <label>                      
+              <input type="email" name="email" placeholder="E-mail" class="email__input" />
+            </label>
+    
+            <div class="subscribe__btn">                        
+              <button type="submit" class="submit__btn">Подписаться
+                <svg class="footer-social__icon icon__send" width="24" height="24">
+                  <use href="images/icons.svg#icon-icon-send"></use>                  
+                </svg></button>                  
+            </div>
+          </form>    
+        </div> 
+
+      </div>
+
+    </footer> 
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>

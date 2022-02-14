@@ -1,0 +1,20 @@
+.about {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 94px;
+  }
+}
+
+.about-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about-list__item:not(:last-child) {
+  margin-right: 30px;
+}
